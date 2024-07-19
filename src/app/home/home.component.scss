@@ -1,0 +1,71 @@
+// header
+.nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+#intro {
+  background-image: url("/blurredHero.jpg"); /* Percorso dell'immagine */
+  background-size: cover; /* Copre completamente il div mantenendo le proporzioni */
+  background-position: right;
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+}
+
+// #reviews {
+//   background-image: url("/feedback.jpg");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.text-shadow-1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+.text-shadow-2 {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+.text-shadow-3 {
+  text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bg-gray{
+  background-color: rgb(204, 204, 204);
+}
+

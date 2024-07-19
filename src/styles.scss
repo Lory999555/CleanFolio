@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(115deg, #ffffff, #dddddd);
+  cursor: none;
+}
+
+/** custom cursor **/
+a,
+button {
+  cursor: none !important;
+}
+
+#cursor {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 0.6rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 50;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s, border 0.2s;
+  &.clickable {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 3px solid white;
+    background-color: transparent;
+  }
+}
+
+#cursor-shadow {
+  aspect-ratio: 1;
+  border-radius: 32%;
+  width: 2rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  z-index: 50;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: opacity 0.2s, width 0.2s;
+  &.clickable {
+    width: 0rem;
+    opacity: 0;
+  }
+}
+
+#upper {
+  color: black;
+  background-color: white;
+  mix-blend-mode: difference;
+}
+
+$primary: #30d4b6;
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
