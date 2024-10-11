@@ -1,9 +1,10 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import Chart from 'chart.js/auto';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
-import { SmoothService } from '../smooth.service';
-import gsap from 'gsap-trial';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
@@ -13,26 +14,13 @@ import gsap from 'gsap-trial';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements AfterViewInit {
-  smoother: ScrollSmoother;
-  constructor(SmoothService: SmoothService) {
-    this.smoother = SmoothService.getSmooth();
+  constructor() {
   }
 
   ngAfterViewInit(): void {
-    this.initScrollAnchor();
     this.initCursorEvent();
     // this.initCanvas();
     this.animateHome();
-  }
-
-  private initScrollAnchor() {
-    document.querySelectorAll('[data-target]').forEach((element) => {
-      element.addEventListener('click', (e) => {
-        const id = (element as HTMLElement).dataset['target'];
-        console.log(id);
-        this.smoother.scrollTo(`#${id}`, true);
-      });
-    });
   }
 
   private initCursorEvent() {

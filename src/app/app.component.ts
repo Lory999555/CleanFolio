@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SmoothService } from './smooth.service';
 import { CursorService } from './cursor.service';
 
 @Component({
@@ -13,5 +12,5 @@ import { CursorService } from './cursor.service';
 export class AppComponent {
   title = 'bootstrap-portfolio';
 
-  constructor(SmoothService: SmoothService,CursorService: CursorService) {}
+  constructor(CursorService: CursorService) {}
 }
